@@ -19,6 +19,9 @@
 
 set -eu -o pipefail
 
+# Ensure Go binary path is in PATH
+export PATH=$PATH:/usr/local/go/bin
+
 # constants
 PROJECT_ROOT="$(git rev-parse --show-toplevel)"
 GOOS="$(go env GOOS)"
